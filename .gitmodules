@@ -4,3 +4,6 @@
 [submodule "lib/FlexCAN_T4_manager"]
 	path = lib/FlexCAN_T4_manager
 	url = git@github.com:NJL7502L/FlexCAN_T4_manager.git
+[submodule "lib/AliExpressIMU_manager"]
+	path = lib/AliExpressIMU_manager
+	url = git@github.com:NJL7502L/AliExpressIMU_manager.git
