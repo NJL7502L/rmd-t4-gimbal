@@ -8,7 +8,7 @@ AliExpressIMU_manager IMU;
 
 void timerInt(){
   canmanager->readBus3();
-  IMU.read();
+  IMU.read(canmanager);
 }
 
 void setup(){
