@@ -7,3 +7,6 @@
 [submodule "lib/AliExpressIMU_manager"]
 	path = lib/AliExpressIMU_manager
 	url = git@github.com:NJL7502L/AliExpressIMU_manager.git
+[submodule "lib/GyemsRMD_manager"]
+	path = lib/GyemsRMD_manager
+	url = git@github.com:NJL7502L/GyemsRMD_manager.git
