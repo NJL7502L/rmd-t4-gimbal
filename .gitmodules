@@ -10,3 +10,6 @@
 [submodule "lib/GyemsRMD_manager"]
 	path = lib/GyemsRMD_manager
 	url = git@github.com:NJL7502L/GyemsRMD_manager.git
+[submodule "lib/MyMath"]
+	path = lib/MyMath
+	url = git@github.com:NJL7502L/MyMath.git
