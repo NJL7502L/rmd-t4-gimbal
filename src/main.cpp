@@ -15,7 +15,7 @@ void timerInt(){
 
 
   uint8_t buf[8] = {0};
-  buf[0] = 0x9A;
+  buf[0] = 0x9C;
   canmanager->pushBus3(0x141,buf);
   canmanager->writeAll();
 }
@@ -57,10 +57,15 @@ void debugPrint(){
   // printTitleValue("Enc Multi",motor.gotData.angle.multiTurn);
   // printTitleValue("Enc Single",motor.gotData.angle.singleTurn);
 
+  // printTitleValue("temperature",motor.gotData.information.temperature);
+  // printTitleValue("voltage",motor.gotData.information.voltage);
+  // printTitleValue("LVProtection",motor.gotData.information.error.lowVoltageProtection);
+  // printTitleValue("OTProtection",motor.gotData.information.error.overTemperatureProtection);
+
   printTitleValue("temperature",motor.gotData.information.temperature);
-  printTitleValue("voltage",motor.gotData.information.voltage);
-  printTitleValue("LVProtection",motor.gotData.information.error.lowVoltageProtection);
-  printTitleValue("OTProtection",motor.gotData.information.error.overTemperatureProtection);
+  printTitleValue("speed",motor.gotData.speed.current);
+  printTitleValue("torque iq",motor.gotData.torque.iq);
+  printTitleValue("encoader",motor.gotData.encoder.current);
   Serial.println();
 }
 
