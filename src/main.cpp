@@ -15,7 +15,7 @@ void timerInt(){
 
 
   uint8_t buf[8] = {0};
-  buf[0] = 0x30;
+  buf[0] = 0x9A;
   canmanager->pushBus3(0x141,buf);
   canmanager->writeAll();
 }
@@ -31,7 +31,8 @@ void setup(){
   MsTimer2::start();
 }
 
-void printTitleValue(const char* str,float val){
+template <typename T>
+void printTitleValue(const char* str,T val){
   Serial.print(str);
   Serial.print(" :\t");
   Serial.print(val);
@@ -42,12 +43,24 @@ void debugPrint(){
   // printTitleValue("yaw",imu.yaw);
   // printTitleValue("pitch",imu.pitch);
   // printTitleValue("roll",imu.roll);
-  printTitleValue("angleKp",motor.gotData.pid.angleKp);
-  printTitleValue("angleKi",motor.gotData.pid.angleKi);
-  printTitleValue("speedKp",motor.gotData.pid.speedKp);
-  printTitleValue("speedKi",motor.gotData.pid.speedKi);
-  printTitleValue("iqKp",motor.gotData.pid.iqKp);
-  printTitleValue("iqKi",motor.gotData.pid.iqKi);
+  // printTitleValue("angleKp",motor.gotData.pid.angleKp);
+  // printTitleValue("angleKi",motor.gotData.pid.angleKi);
+  // printTitleValue("speedKp",motor.gotData.pid.speedKp);
+  // printTitleValue("speedKi",motor.gotData.pid.speedKi);
+  // printTitleValue("iqKp",motor.gotData.pid.iqKp);
+  // printTitleValue("iqKi",motor.gotData.pid.iqKi);
+  // printTitleValue("Accel",motor.gotData.accel.current);
+
+  // printTitleValue("Enc Current",motor.gotData.encoder.current);
+  // printTitleValue("Enc Original",motor.gotData.encoder.original);
+  // printTitleValue("Enc Offset",motor.gotData.encoder.offset);
+  // printTitleValue("Enc Multi",motor.gotData.angle.multiTurn);
+  // printTitleValue("Enc Single",motor.gotData.angle.singleTurn);
+
+  printTitleValue("temperature",motor.gotData.information.temperature);
+  printTitleValue("voltage",motor.gotData.information.voltage);
+  printTitleValue("LVProtection",motor.gotData.information.error.lowVoltageProtection);
+  printTitleValue("OTProtection",motor.gotData.information.error.overTemperatureProtection);
   Serial.println();
 }
 
