@@ -1,5 +1,6 @@
 #include "../lib/AliExpressIMU_manager/AliExpressIMU_manager.h"
 #include "../lib/FlexCAN_T4_manager/FlexCAN_T4_manager.h"
+#include "../lib/GyemsRMD_base/GyemsRMD_base.h"
 #include "../lib/GyemsRMD_can_manager/GyemsRMD_can_manager.h"
 #include <Arduino.h>
 #include <MsTimer2.h>
@@ -60,10 +61,10 @@ void debugPrint() {
   // printTitleValue("LVProtection",motor.gotData.information.error.lowVoltageProtection);
   // printTitleValue("OTProtection",motor.gotData.information.error.overTemperatureProtection);
 
-  printTitleValue("temperature", motor.gotData.information.temperature);
-  printTitleValue("speed", motor.gotData.speed.current);
-  printTitleValue("torque iq", motor.gotData.torque.iq);
-  printTitleValue("encoader", motor.gotData.encoder.current);
+  // printTitleValue("temperature", motor.gotData.information.temperature);
+  // printTitleValue("speed", motor.gotData.speed.current);
+  // printTitleValue("torque iq", motor.gotData.torque.iq);
+  // printTitleValue("encoader", motor.gotData.encoder.current);
   Serial.println();
 }
 
