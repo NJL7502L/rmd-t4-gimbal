@@ -16,3 +16,6 @@
 [submodule "lib/GyemsRMD_base"]
 	path = lib/GyemsRMD_base
 	url = git@github.com:NJL7502L/GyemsRMD_base.git
+[submodule "lib/GyemsRMD_can_manager"]
+	path = lib/GyemsRMD_can_manager
+	url = git@github.com:NJL7502L/GyemsRMD_can_manager.git
