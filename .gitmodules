@@ -13,3 +13,6 @@
 [submodule "lib/MyMath"]
 	path = lib/MyMath
 	url = git@github.com:NJL7502L/MyMath.git
+[submodule "lib/GyemsRMD_base"]
+	path = lib/GyemsRMD_base
+	url = git@github.com:NJL7502L/GyemsRMD_base.git

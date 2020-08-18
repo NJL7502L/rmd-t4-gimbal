@@ -1,12 +1,12 @@
 #include "../lib/AliExpressIMU_manager/AliExpressIMU_manager.h"
 #include "../lib/FlexCAN_T4_manager/FlexCAN_T4_manager.h"
-#include "../lib/GyemsRMD_manager/GyemsRMD_manager.h"
+#include "../lib/GyemsRMD_can_manager/GyemsRMD_can_manager.h"
 #include <Arduino.h>
 #include <MsTimer2.h>
 
 FlexCAN_T4_manager *canmanager = FlexCAN_T4_manager::getInstance();
 // AliExpressIMU_manager imu;
-GyemsRMD_manager motor;
+GyemsRMD_can_manager motor;
 
 void timerInt() {
   canmanager->readBus3();
